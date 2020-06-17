@@ -9,7 +9,9 @@
 </head>
 
 <body>
+    <a href="/cocktails/new">New Cocktail</a>
     <h1>Cocktail List</h1>
+
     <table>
         <thead>
             <tr>
@@ -34,8 +36,8 @@
                 <td><%= c.ingredient4 %></td>
                 <td><%= c.ingredient5 %></td>
                 <td><%= c.preparation %></td>
-
             </tr>
+            <button type="submit">DETAILS</button>
             <% }); %>
         </tbody>
     </table>
