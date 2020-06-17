@@ -1,33 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
+<%- include('../partials/header') %>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+<section id="show-page">
+    <div>Title: </div>
+    <div><%= cocktail.title %></div>
+    <div>Description: </div>
+    <div><%= cocktail.description %></div>
+    <div>Ingredients #1: </div>
+    <div><%= cocktail.ingredient1 %></div>
+    <div>Ingredients #2: </div>
+    <div><%= cocktail.ingredient2 %></div>
+    <div>Ingredients #3: </div>
+    <div><%= cocktail.ingredient3 %></div>
+    <div>Ingredients #4: </div>
+    <div><%= cocktail.ingredient4 %></div>
+    <div>Ingredients #5: </div>
+    <div><%= cocktail.ingredient5 %></div>
+    <div>Preparation: </div>
+    <div><%= cocktail.preparation %></div>
+</section>
 
-<body>
-    <a href="/cocktails">Cocktails list</a>
-    <h2>Cocktail detail</h2>
-    <section id="show-page">
-        <div>Title: </div>
-        <div><%= cocktail.title %></div>
-        <div>Description: </div>
-        <div><%= cocktail.description %></div>
-        <div>Ingredients #1: </div>
-        <div><%= cocktail.ingredient1 %></div>
-        <div>Ingredients #2: </div>
-        <div><%= cocktail.ingredient2 %></div>
-        <div>Ingredients #3: </div>
-        <div><%= cocktail.ingredient3 %></div>
-        <div>Ingredients #4: </div>
-        <div><%= cocktail.ingredient4 %></div>
-        <div>Ingredients #5: </div>
-        <div><%= cocktail.ingredient5 %></div>
-        <div>Preparation: </div>
-        <div><%= cocktail.preparation %></div>
-    </section>
-</body>
-
-</html>
+<%- include('../partials/footer') %>

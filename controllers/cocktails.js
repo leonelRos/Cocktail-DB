@@ -11,6 +11,7 @@ module.exports = {
 function index(req, res) {
     Cocktail.find({}, function (err, cocktails) {
         res.render('cocktails/index', {
+            title: 'Cocktails List',
             cocktails
         })
     });
@@ -19,6 +20,7 @@ function index(req, res) {
 function show(req, res) {
     Cocktail.findById(req.params.id, function (err, cocktail) {
         res.render('cocktails/show', {
+            title: 'Cocktail Details',
             cocktail
         })
     });
@@ -34,5 +36,7 @@ function create(req, res) {
 }
 
 function newCocktail(req, res) {
-    res.render('cocktails/new')
+    res.render('cocktails/new', {
+        title: "Add Cocktail"
+    })
 }

@@ -1,50 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
+<%- include('../partials/header') %>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cocktails DB</title>
-    <link rel="stylesheet" href="/stylesheets/style.css">
-</head>
+<form action="/cocktails" method="POST">
+    <label>Title:
+        <input type="text" name="title">
+    </label><br>
+    <label>Description:
+        <input type="text" name="description">
+    </label><br>
 
-<body>
-    <a href="/cocktails">Cocktails List</a>
-    <a href="/">Home</a>
-    <h2>Enter a New Cocktail</h2>
-    <form action="/cocktails" method="POST">
-        <label>Title:
-            <input type="text" name="title">
-        </label><br>
-        <label>Description:
-            <input type="text" name="description">
-        </label><br>
+    <label>Ingredient#1:
+        <input type="text" name="ingredient1">
 
-        <label>Ingredient#1:
-            <input type="text" name="ingredient1">
+    </label>
+    <label>Ingredient#2:
+        <input type="text" name="ingredient2">
 
-        </label>
-        <label>Ingredient#2:
-            <input type="text" name="ingredient2">
+    </label>
+    <label>Ingredient#3:
+        <input type="text" name="ingredient3">
 
-        </label>
-        <label>Ingredient#3:
-            <input type="text" name="ingredient3">
+    </label>
+    <label>Ingredient#4:
+        <input type="text" name="ingredient4">
 
-        </label>
-        <label>Ingredient#4:
-            <input type="text" name="ingredient4">
+    </label>
+    <label>Ingredient#5:
+        <input type="text" name="ingredient5">
 
-        </label>
-        <label>Ingredient#5:
-            <input type="text" name="ingredient5">
-
-        </label><br>
-        <label>Preparation:
-            <input type="text" name="preparation" col="4">
-        </label><br>
-        <input type="submit" value="Add Cocktail">
-    </form>
-</body>
-
-</html>
+    </label><br>
+    <label>Preparation:
+        <input type="text" name="preparation" col="4">
+    </label><br>
+    <input type="submit" value="Add Cocktail">
+</form>
+<%- include('../partials/footer') %>
