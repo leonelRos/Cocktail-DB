@@ -35,6 +35,7 @@ function create(req, res) {
     })
 }
 
+
 function newCocktail(req, res) {
     res.render('cocktails/new', {
         title: "Add Cocktail"
