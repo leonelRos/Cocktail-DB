@@ -7,7 +7,6 @@ module.exports = {
     create
 };
 
-
 function index(req, res) {
     Cocktail.find({}, function (err, cocktails) {
         res.render('cocktails/index', {
@@ -34,7 +33,6 @@ function create(req, res) {
         res.redirect('/cocktails')
     })
 }
-
 
 function newCocktail(req, res) {
     res.render('cocktails/new', {
