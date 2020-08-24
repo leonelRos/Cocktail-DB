@@ -2,9 +2,21 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var reviewCocktails = new Schema({
-    content: String,
-    rating: {type: Number, min: 1, max: 5, default: 5}
-}, {
+    content: {
+        type: String,
+       
+    },
+
+        // required: true
+    
+    rating: {
+        type: Number,
+        min: 1,
+        max: 5,
+        default: 5
+    }
+},
+{
     timestamps: true
 })
 
