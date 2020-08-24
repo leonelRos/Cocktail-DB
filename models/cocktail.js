@@ -1,6 +1,13 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
+var reviewCocktails = new Schema({
+    content: String,
+    rating: {type: Number, min: 1, max: 5, default: 5}
+}, {
+    timestamps: true
+})
+
 var cocktailSchema = new Schema({
     title: {
         type: String,
@@ -21,16 +28,17 @@ var cocktailSchema = new Schema({
     },
     ingredient4: {
         type: String,
-        required: true
+        // required: true
     },
     ingredient5: {
         type: String,
-        required: true
+        // required: true
     },
     preparation: {
         type: String,
         required: true
-    }
+    },
+    reviews: [reviewCocktails]
 }, {
     timestamps: true
 });

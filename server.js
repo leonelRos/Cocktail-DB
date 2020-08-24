@@ -9,6 +9,8 @@ require('dotenv').config
 
 var indexRouter = require('./routes/index');
 var cocktailsRouter = require('./routes/cocktails');
+//adding review router
+var reviewsRouter = require('./routes/review')
 
 var app = express();
 
@@ -26,6 +28,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/cocktails', cocktailsRouter);
+//mounting reviews router
+app.use('/', reviewsRouter)
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
