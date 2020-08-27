@@ -11,6 +11,7 @@ var indexRouter = require('./routes/index');
 var cocktailsRouter = require('./routes/cocktails');
 //adding review router
 var reviewsRouter = require('./routes/review')
+var glasswareRouter = require('./routes/glasswares')
 
 var app = express();
 
@@ -30,6 +31,7 @@ app.use('/', indexRouter);
 app.use('/cocktails', cocktailsRouter);
 //mounting reviews router
 app.use('/', reviewsRouter)
+app.use('/', glasswareRouter)
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

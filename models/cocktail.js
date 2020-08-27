@@ -48,7 +48,8 @@ var cocktailSchema = new Schema({
         type: String,
         required: true
     },
-    reviews: [reviewCocktails]
+    reviews: [reviewCocktails],
+    glass: [{type: Schema.Types.ObjectId, ref: 'Glassware'}]
 }, {
     timestamps: true
 });

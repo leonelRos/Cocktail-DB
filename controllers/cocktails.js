@@ -1,4 +1,5 @@
 var Cocktail = require('../models/cocktail');
+var Glassware = require('../models/glassware');
 
 module.exports = {
     index,
@@ -17,10 +18,14 @@ function index(req, res) {
 };
 
 function show(req, res) {
-    Cocktail.findById(req.params.id, function (err, cocktail) {
-        res.render('cocktails/show', {
-            title: 'Cocktail Details',
-            cocktail
+    Cocktail.findById(req.params.id).populate("glass").exec(function (err, cocktail) {
+        Glassware.find({ _id: { $nin: cocktail.glass } })
+            .exec(function (err, glassware) {
+            console.log(glassware)
+            res.render('cocktails/show', {
+                title: 'Cocktail Details',
+                cocktail, glassware
+            })
         })
     });
 };
