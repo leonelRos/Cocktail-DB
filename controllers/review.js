@@ -1,7 +1,6 @@
 var Cocktail = require('../models/cocktail');
-const cocktail = require('../models/cocktail');
-// const { create } = require('../models/cocktail');
-// const cocktails = require('./cocktails');
+// const cocktail = require('../models/cocktail');
+
 
 module.exports = {
     create
