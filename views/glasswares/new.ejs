@@ -1,18 +1,19 @@
 <%- include('../partials/header') %>
 
-<p>Please first ensure that the glass is not in the dropdown
+<p>
+  Please first ensure that the glass is not in the dropdown
   <select>
     <% glassware.forEach(function(p) { %>
-      <option><%= p.type_of_glass %></option>
+    <option><%= p.type_of_glass %></option>
     <% }) %>
   </select>
 </p>
 <form id="add-glassware-form" action="/glasswares" method="POST">
   <label>Type of Glass:</label>
-  <input type="text" name="type_of_glass">
+  <input type="text" name="type_of_glass" autofocus />
   <label>Material: </label>
-  <input type="text" name="material">
-  <input type="submit" value="Add Glassware">
+  <input type="text" name="material" />
+  <input type="submit" value="Add Glassware" />
 </form>
 
 <%- include('../partials/footer') %>
