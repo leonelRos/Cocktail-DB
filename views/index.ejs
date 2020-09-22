@@ -53,15 +53,15 @@
             <img
               src="<%= userDrink.drinks[0].strDrinkThumb %>"
               class="img-circle"
-              width="300px"
-              height="300px"
+              width="500px"
+              height="500px"
             />
             <h2>Instructions:</h2>
             <p><%= userDrink.drinks[0].strInstructions %></p>
           </div>
           <div class="panel-body">
             <h3>Ingredients:</h3>
-            <div class="list-group">
+            <div class="list-group-dark">
               <% for(var i =1; i < 15; i++) {%> <% if
               (userDrink.drinks[0][`strIngredient${i}`] == null) {%> <% break %>
               <% } %>
