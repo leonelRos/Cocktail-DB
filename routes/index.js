@@ -1,8 +1,8 @@
 const express = require("express");
 const router = express.Router();
 const request = require("request");
-const rootURL = "https://thecocktaildb.com/api/json/v2/9973533/search.php?s=";
-console.log(rootURL);
+const rootURL = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=";
+// console.log(rootURL);
 
 /* GET home page. */
 router.get("/", (req, res, next) => {
@@ -13,10 +13,17 @@ router.get("/", (req, res, next) => {
 });
 
 router.post("/", (req, res, next) => {
-  request(rootURL + req.body.drinks, (err, response, body) => {
-    // var userDrink = JSON.parse(body);
-    console.log(req.body.drinks);
-    res.render("index", { userDrink: body });
+  var options = {
+    url: rootURL + req.body.drinks,
+    headers: {
+      "User-Agent": "9973533",
+    },
+  };
+  request(options, (err, response, body) => {
+    var userDrink = JSON.parse(body);
+    // console.log(userDrink.drinks[0].strDrinkThumb);
+    // console.log(JSON.stringify(userDrink));
+    res.render("index", { userDrink: userDrink });
   });
 });
 
