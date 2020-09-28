@@ -1,33 +1,39 @@
 <%- include('../partials/header') %>
 
 <table>
-    <thead>
-        <tr>
-            <th>Title:</th>
-            <th>Description:</th>
-            <th>Ingredient 1:</th>
-            <th>Ingredient 2:</th>
-            <th>Ingredient 3:</th>
-            <th>Ingredient 4:</th>
-            <th>Ingredient 5:</th>
-            <th>Preparation: </th>
-        </tr>
-    </thead>
-   
-    <tbody>
-        <% cocktails.forEach(function(c) { %>
-        <tr>
-            <td><%= c.title %></td>
-            <td><%= c.description %></td>
-            <td><%= c.ingredient1 %></td>
-            <td><%= c.ingredient2 %></td>
-            <td><%= c.ingredient3 %></td>
-            <td><%= c.ingredient4 %></td>
-            <td><%= c.ingredient5 %></td>
-            <td><%= c.preparation %></td>
-            <td><a href="/cocktails/<%= c._id %>">DETAILS</a></td>
-        </tr>
-        <% }); %>
-    </tbody>
+  <thead>
+    <tr>
+      <th>Title:</th>
+      <th>Description:</th>
+      <th>Ingredient 1:</th>
+      <th>Ingredient 2:</th>
+      <th>Ingredient 3:</th>
+      <th>Ingredient 4:</th>
+      <th>Ingredient 5:</th>
+      <th>Preparation:</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% cocktails.forEach(function(c) { %>
+    <tr>
+      <td><%= c.title %></td>
+      <td><%= c.description %></td>
+      <td><%= c.ingredient1 %></td>
+      <td><%= c.ingredient2 %></td>
+      <td><%= c.ingredient3 %></td>
+      <td><%= c.ingredient4 %></td>
+      <td><%= c.ingredient5 %></td>
+      <td><%= c.preparation %></td>
+      <td><a href="/cocktails/<%= c._id %>">DETAILS</a></td>
+      <td>
+        <form action="cocktails/<%= c._id %>?_method=DELETE" method="POST">
+          <button class="del-button hoverable">DELETE</button>
+        </form>
+      </td>
+    </tr>
+
+    <% }); %>
+  </tbody>
 </table>
 <%- include('../partials/footer') %>

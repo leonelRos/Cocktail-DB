@@ -1,3 +1,4 @@
+// const cocktail = require("../models/cocktail");
 var Cocktail = require("../models/cocktail");
 var Glassware = require("../models/glassware");
 
@@ -6,7 +7,14 @@ module.exports = {
   show,
   new: newCocktail,
   create,
+  delete: deleteCocktail,
 };
+
+// function deleteCocktail(req, res) {
+//   Cocktail.findByIdAndRemove(req.params.id).then(function (err, cocktails) {
+//     res.redirect("/cocktails");
+//   });
+// }
 
 function index(req, res) {
   Cocktail.find({}, (err, cocktails) => {
@@ -46,5 +54,11 @@ function create(req, res) {
 function newCocktail(req, res) {
   res.render("cocktails/new", {
     title: "Add Cocktail",
+  });
+}
+
+function deleteCocktail(req, res) {
+  Cocktail.findByIdAndDelete(req.params.id).then(function (err, cocktails) {
+    res.redirect("/cocktails");
   });
 }
