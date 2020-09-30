@@ -37,7 +37,7 @@ function show(req, res) {
 
 function create(req, res) {
   var cocktail = new Cocktail(req.body);
-  cocktail.save(function (err) {
+  cocktail.save((err) => {
     if (err) return res.render("cocktails/new");
     console.log(cocktail);
     res.redirect("/cocktails");
@@ -52,7 +52,7 @@ function newCocktail(req, res) {
 
 //delete the cocktails
 function deleteCocktail(req, res) {
-  Cocktail.findByIdAndDelete(req.params.id).then(function (err, cocktails) {
+  Cocktail.findByIdAndDelete(req.params.id).then((err, cocktails) => {
     res.redirect("/cocktails");
   });
 }
