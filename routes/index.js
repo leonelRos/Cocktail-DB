@@ -1,8 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const request = require("request");
-const rootURL = "https://thecocktaildb.com/api/json/v2/9973533/search.php?s=";
-// console.log(rootURL);
+const rootURL = `https://thecocktaildb.com/api/json/v2/${process.env.COCKTAIL_KEY}/search.php?s=`;
 
 router.get("/", (req, res, next) => {
   res.render("index", {
@@ -14,9 +13,6 @@ router.get("/", (req, res, next) => {
 router.post("/", (req, res, next) => {
   var options = {
     url: rootURL + req.body.drinks,
-    headers: {
-      "User-Agent": "9973533",
-    },
   };
   request(options, (err, response, body) => {
     var userDrink = JSON.parse(body);

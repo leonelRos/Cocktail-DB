@@ -7,6 +7,8 @@ module.exports = {
   new: newCocktail,
   create,
   delete: deleteCocktail,
+  edit,
+  update,
 };
 
 function index(req, res) {
@@ -55,4 +57,25 @@ function deleteCocktail(req, res) {
   Cocktail.findByIdAndDelete(req.params.id).then((err, cocktails) => {
     res.redirect("/cocktails");
   });
+}
+
+function edit(req, res) {
+  Cocktail.findById(req.params.id, (err, cocktail) => {
+    res.render("cocktails/edit", {
+      title: "Edit Cocktail",
+      cocktail,
+    });
+  });
+}
+
+function update(req, res) {
+  Cocktail.findByIdAndUpdate(
+    req.params.id,
+    req.body,
+    { new: true },
+    (err, cocktail) => {
+      // res.redirect(`/cocktails/${req.params.id}`);
+      res.redirect("/cocktails");
+    }
+  );
 }

@@ -1,0 +1,76 @@
+<%- include('../partials/header') %>
+
+<form action="/cocktails/<%= cocktail._id %>?_method=PUT" method="POST">
+  <div class="container">
+    <label
+      >Title:
+      <input
+        type="text"
+        autofocus
+        name="title"
+        value="<%=cocktail.title %>"
+      /> </label
+    ><br />
+    <label
+      >Description:
+      <input
+        type="text"
+        name="description"
+        value="<%=cocktail.description %>"
+      /> </label
+    ><br />
+
+    <label
+      >Ingredient 1:
+      <input
+        type="text"
+        name="ingredient1"
+        value="<%=cocktail.ingredient1 %>"
+      />
+    </label>
+    <label
+      >Ingredient 2:
+      <input
+        type="text"
+        name="ingredient2"
+        value="<%=cocktail.ingredient2 %>"
+      />
+    </label>
+    <label
+      >Ingredient 3:
+      <input
+        type="text"
+        name="ingredient3"
+        value="<%=cocktail.ingredient3 %>"
+      />
+    </label>
+    <label
+      >Ingredient 4:
+      <input
+        type="text"
+        name="ingredient4"
+        value="<%=cocktail.ingredient4 %>"
+      />
+    </label>
+    <label
+      >Ingredient 5:
+      <input
+        type="text"
+        name="ingredient5"
+        value="<%=cocktail.ingredient5 %>"
+      /> </label
+    ><br />
+    <label
+      >Preparation:
+      <input
+        type="text"
+        name="preparation"
+        col="4"
+        value="<%=cocktail.preparation %>"
+      /> </label
+    ><br /><br />
+
+    <input type="submit" value="Update" class="add-button" />
+  </div>
+</form>
+<%- include('../partials/footer') %>
