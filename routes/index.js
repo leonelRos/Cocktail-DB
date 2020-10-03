@@ -19,7 +19,26 @@ router.post("/", (req, res, next) => {
     // console.log(userDrink.drinks[0].strDrinkThumb);
     // console.log(JSON.stringify(userDrink));
     res.render("index", { userDrink: userDrink });
+    console.log("err:", err);
   });
 });
+
+// router.post("/", (req, res, next) => {
+//   var options = {
+//     url: rootURL + req.body.drinks,
+//   };
+//   request(options, (err, response, body) => {
+//     var userDrink = JSON.parse(body);
+//     if (userDrink === null) {
+//       console.log("no drink founded");
+//     } else {
+//       // console.log(userDrink.drinks[0].strDrinkThumb);
+//       // console.log(JSON.stringify(userDrink));
+//       res.render("index", { userDrink: userDrink });
+//       console.log("err:", err);
+//       // console.log(userDrink);
+//     }
+//   });
+// });
 
 module.exports = router;
