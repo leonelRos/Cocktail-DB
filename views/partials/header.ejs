@@ -11,10 +11,22 @@
 
 <body>
     <nav>
-        <a href="/cocktails/new" <%- title === 'Add Cocktail' ? 'class="active"' : '' %>>New Cocktail</a>
-        <a href="/cocktails" <%- title === 'Cocktails List' ? 'class="active"' : '' %>>Cocktails List</a>
-        <a href="/glasswares/new" <%- title === 'Add Glassware' ? 'class="active"' : '' %>>Add Glass</a>
-        <a href="/">Home</a>
+        <ul class="right">
+            <li>
+                <% if (loggedIn) { %>
+                    <a href="/logout"><i class="material-icons left"></i>Log Out</a>
+                    <a href="/user"><i class="material-icons left"></i>Profile</a>
+                    <a href="/cocktails/new" <%- title === 'Add Cocktail' ? 'class="active"' : '' %>>New Cocktail</a>
+                    <a href="/cocktails" <%- title === 'Cocktails List' ? 'class="active"' : '' %>>Cocktails List</a>
+                    <a href="/glasswares/new" <%- title === 'Add Glassware' ? 'class="active"' : '' %>>Add Glass</a>
+                    <a href="/">Home</a>
+               
+            <% } else { %>
+              <a href="/login"><i class="material-icons left"></i>Login</a>
+            <% } %>
+            </li>
+          </ul>
+     
     </nav>
     <main>
         <h1><%= title %></h1>

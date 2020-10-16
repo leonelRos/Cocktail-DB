@@ -1,4 +1,45 @@
-<%- include('../partials/header') %>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cocktail-DB</title>
+    <link
+      rel="shorcut icon"
+      type="image/jpg"
+      href="/public/images/leo-logo.jpg"
+    />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
 
+  <body>
+    <a href="/cocktails/new">New Cocktail</a>
+    <a href="/cocktails">Cocktails List</a>
 
-<%- include('../partials/footer') %>
+<div class="row col-xs-8 col-xs-offset-2">
+  <% if (user) { %>
+    <div class="panel panel-default">
+      <div class="panel-heading text-center">
+        <h2><%= user.nickname %></h2>
+        <img
+        src="<%= user.picture %>"
+        class="img-circle"
+        width="150px"
+        height="150px"
+        padding="15px"
+        />
+        
+      </div>
+    </div>
+    <% } %>
+  </div>
+  
+
+</body>
+
+</html>

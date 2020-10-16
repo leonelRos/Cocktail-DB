@@ -11,5 +11,4 @@ router.delete("/:id", cocktailsCtrl.delete);
 router.get("/:id/edit", cocktailsCtrl.edit);
 router.put("/:id", cocktailsCtrl.update);
 
-
 module.exports = router;

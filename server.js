@@ -4,12 +4,15 @@ var path = require("path");
 var cookieParser = require("cookie-parser");
 var logger = require("morgan");
 var methodOverride = require("method-override");
+const passport =require("passport");
+const session = require('express-session');
 //connecting to a database
 require("dotenv").config();
 
 var app = express();
 
 require("./config/database");
+require('./config/passport');
 
 var indexRouter = require("./routes/index");
 var cocktailsRouter = require("./routes/cocktails");
@@ -31,6 +34,22 @@ app.use(
 );
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
+
+app.use(session({
+  secret: 'your_secret_key',
+  resave: true,
+  saveUninitialized: true,
+}));
+app.use(passport.initialize());
+app.use(passport.session());
+
+app.use(function(req, res, next) {
+  res.locals.loggedIn = false;
+  if(req.session.passport && typeof req.session.passport.user != "undefined"){
+      res.locals.loggedIn = true;
+  }
+  next();
+})
 
 app.use("/", indexRouter);
 app.use("/cocktails", cocktailsRouter);
