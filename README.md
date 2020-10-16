@@ -8,4 +8,4 @@
 
 ## Auth0 implemented that gives you access to create your own cocktails
 
-![](https://github.com/leonelRos/Cocktail-DB/blob/master/img/Auth-0.png)
+![](https://github.com/leonelRos/Cocktail-DB/blob/master/public/images/Auth-0.png)
