@@ -3,10 +3,10 @@ const passport = require("passport")
 
 
 const strategy = new Auth0Strategy({
-    domain: 'dev-u06815mj.us.auth0.com',
-    clientID: 'HJLslQo5toIoVTeQ62ilYj4TjeMkxvOq',
-    clientSecret: 'CTzUVTNjExSMMwaO7dma2_5b3eqqDkWeFHP-KNSSm-MlnFUkSQMMXQfLZQMu67Wc',
-    callbackURL: 'http://localhost:3000/callback'
+    domain: process.env.DOMAIN,
+    clientID: process.env.CLIENT_ID,
+    clientSecret: process.env.CLIENT_SECRET,
+    callbackURL: process.env.CALLBACK_URL
   },
   function(accessToken, refreshToken, extraParam, profile, done){
       return done(null, profile)

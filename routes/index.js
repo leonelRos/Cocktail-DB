@@ -31,9 +31,9 @@ router.get('/', function(req, res, next){
 
 
 router.get('/login', passport.authenticate('auth0', {
-  clientID: 'HJLslQo5toIoVTeQ62ilYj4TjeMkxvOq',
-  domain: 'dev-u06815mj.us.auth0.com',
-  redirectUri: 'http://localhost:3000/callback',
+  clientID: process.env.CLIENT_ID,
+  domain: process.env.DOMAIN,
+  redirectUri: process.env.CALLBACK_URL,
   responseType: 'code', 
   audience: 'https://dev-u06815mj.us.auth0.com/userinfo',
   scope: 'openid profile'
@@ -41,6 +41,19 @@ router.get('/login', passport.authenticate('auth0', {
    function(req, res){
        res.redirect('/')
    })
+
+
+  //  router.get('/login', passport.authenticate('auth0', {
+  //   clientID: 'HJLslQo5toIoVTeQ62ilYj4TjeMkxvOq',
+  //   domain: 'dev-u06815mj.us.auth0.com',
+  //   redirectUri: 'http://localhost:3000/callback',
+  //   responseType: 'code', 
+  //   audience: 'https://dev-u06815mj.us.auth0.com/userinfo',
+  //   scope: 'openid profile'
+  //    }), 
+  //    function(req, res){
+  //        res.redirect('/')
+  //    })
 
 router.get('/logout', function(req,res){
   req.logout();
