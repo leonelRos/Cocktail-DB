@@ -1,12 +1,12 @@
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background: rgb(6, 39, 58);
   color: rgb(184, 192, 197);
+  font-family: Lusitana, Georgia, serif;
 }
 
 a {
-  color: #00b7ff;
+  color: rgb(195, 127, 63);
 }
 
 #add-review-form {
@@ -26,4 +26,8 @@ h3 {
   font-size: 24px;
   color: black;
   background: white;
+}
+
+ul {
+  list-style: none;
 }
