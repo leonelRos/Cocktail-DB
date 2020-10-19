@@ -49,3 +49,9 @@ nav {
 .jumbotron {
   background-color: #6f655394;
 }
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin: 40px;
+}
