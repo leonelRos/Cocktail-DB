@@ -1,12 +1,21 @@
 body {
-  padding: 50px;
+  /* padding: 50px; */
   background: rgb(6, 39, 58);
-  color: rgb(184, 192, 197);
+  color: #ffffff;
   font-family: Lusitana, Georgia, serif;
+  /* background: linear-gradient(#000 0, #031621 64.2%, #06273a 100%); */
 }
 
 a {
   color: rgb(195, 127, 63);
+}
+
+.title-home {
+  text-align: center;
+}
+
+.panel-default {
+  margin-top: 45px;
 }
 
 #add-review-form {
@@ -30,4 +39,13 @@ h3 {
 
 ul {
   list-style: none;
+  font-size: 20px;
+}
+header,
+nav {
+  background: linear-gradient(#000 0, #031621 64.2%, #06273a 100%);
+  font-size: 20px;
+}
+.jumbotron {
+  background-color: #6f655394;
 }
