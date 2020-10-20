@@ -55,3 +55,12 @@ form {
   flex-direction: column;
   margin: 40px;
 }
+
+.new-cocktail {
+  width: 200px;
+}
+#add-glassware-form {
+  display: flex;
+  margin: 40px;
+  width: 300px;
+}
