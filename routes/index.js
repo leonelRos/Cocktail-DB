@@ -21,7 +21,7 @@ router.post("/", (req, res, next) => {
     // console.log(userDrink.drinks[0].strDrink);
     // console.log(JSON.stringify(userDrink));
     res.render("index", { userDrink: userDrink });
-    console.log("err:", err);
+    // console.log("err:", err);
   });
 });
 
@@ -42,18 +42,6 @@ router.get('/login', passport.authenticate('auth0', {
        res.redirect('/')
    })
 
-
-  //  router.get('/login', passport.authenticate('auth0', {
-  //   clientID: 'HJLslQo5toIoVTeQ62ilYj4TjeMkxvOq',
-  //   domain: 'dev-u06815mj.us.auth0.com',
-  //   redirectUri: 'http://localhost:3000/callback',
-  //   responseType: 'code', 
-  //   audience: 'https://dev-u06815mj.us.auth0.com/userinfo',
-  //   scope: 'openid profile'
-  //    }), 
-  //    function(req, res){
-  //        res.redirect('/')
-  //    })
 
 router.get('/logout', function(req,res){
   req.logout();
