@@ -25,8 +25,12 @@
       <td><%= c.ingredient4 %></td>
       <td><%= c.ingredient5 %></td>
       <td><%= c.preparation %></td>
-      <td><a href="/cocktails/<%= c._id %>">DETAILS</a></td>
-      <td><a href="/cocktails/<%= c._id %>/edit">EDIT</a></td>
+      <td>
+        <a id="btn-cocktails-id" href="/cocktails/<%= c._id %>">DETAILS</a>
+      </td>
+      <td>
+        <a id="btn-cocktails-id" href="/cocktails/<%= c._id %>/edit">EDIT</a>
+      </td>
       <td>
         <form action="cocktails/<%= c._id %>?_method=DELETE" method="POST">
           <button id="btn-cocktails" class="del-button hoverable">

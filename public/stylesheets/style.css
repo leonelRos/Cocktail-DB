@@ -46,8 +46,27 @@ a:hover {
   cursor: pointer;
   opacity: 0.6;
   transition: 0.3s;
+  font-size: 16px;
+  border: 1px solid black;
 }
 #btn-cocktails:hover {
+  opacity: 1;
+}
+
+#btn-cocktails-id {
+  width: 130px;
+  border-radius: 7px;
+  padding: 10px 18px;
+  background-color: rgb(146, 37, 39);
+  color: #ffffff;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: 0.3s;
+  text-decoration: none;
+  font-size: 16px;
+  border: 1px solid black;
+}
+#btn-cocktails-id:hover {
   opacity: 1;
 }
 
@@ -61,6 +80,8 @@ h3 {
 ul {
   list-style: none;
   font-size: 20px;
+  margin: 0px;
+  padding: 0px;
 }
 header,
 nav {
@@ -68,13 +89,13 @@ nav {
   font-size: 20px;
 }
 .jumbotron {
-  background-color: #6f655394;
+  background-color: #6f536959;
 }
 
 form {
   display: flex;
   flex-direction: column;
-  margin: 40px;
+  margin: 5px auto;
 }
 
 .new-cocktail {
