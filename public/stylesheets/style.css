@@ -8,17 +8,12 @@ body {
 
 a {
   color: rgb(195, 127, 63);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
 }
 
-button {
-  margin-top: 16px;
-  width: 111px;
-  border-radius: 4px;
-  padding: 4px;
-  background-color: rgb(146, 37, 39);
-  color: #ffffff;
-  cursor: pointer;
-}
 .title-home {
   text-align: center;
 }
@@ -40,6 +35,20 @@ button {
 }
 
 #add-per-to-cocktail {
+}
+
+#btn-cocktails {
+  width: 130px;
+  border-radius: 7px;
+  padding: 10px 18px;
+  background-color: rgb(146, 37, 39);
+  color: #ffffff;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: 0.3s;
+}
+#btn-cocktails:hover {
+  opacity: 1;
 }
 
 .h3,

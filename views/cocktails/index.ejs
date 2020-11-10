@@ -29,7 +29,9 @@
       <td><a href="/cocktails/<%= c._id %>/edit">EDIT</a></td>
       <td>
         <form action="cocktails/<%= c._id %>?_method=DELETE" method="POST">
-          <button class="del-button hoverable">DELETE</button>
+          <button id="btn-cocktails" class="del-button hoverable">
+            DELETE
+          </button>
         </form>
       </td>
     </tr>
