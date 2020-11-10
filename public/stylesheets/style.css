@@ -35,6 +35,8 @@ a:hover {
 }
 
 #add-per-to-cocktail {
+  margin: 17px;
+  width: 150px;
 }
 
 #btn-cocktails {
@@ -105,4 +107,10 @@ form {
   display: flex;
   margin: 40px;
   width: 300px;
+}
+
+@media screen and (min-width: 600px) {
+  .container {
+    width: auto;
+  }
 }
