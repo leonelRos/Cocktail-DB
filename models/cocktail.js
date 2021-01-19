@@ -40,11 +40,9 @@ var cocktailSchema = new Schema(
     },
     ingredient4: {
       type: String,
-      // required: true
     },
     ingredient5: {
       type: String,
-      // required: true
     },
     preparation: {
       type: String,
